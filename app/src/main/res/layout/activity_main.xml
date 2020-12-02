@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbars="none"
+    android:orientation="vertical"
+    android:scrollingCache="true">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#373737"
+        app:navigationIcon="@drawable/ic_baseline_home_24"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStartWithNavigation="0dp"
+        app:title="Home"
+        app:titleTextColor="#FFFFFF"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/gotocart"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_margin="10dp"
+      android:clickable="true"
+      android:tint="#FFFFFF"
+      app:backgroundTint="#373737"
+      app:fabSize="normal"
+
+      app:rippleColor="@android:color/white"
+      app:srcCompat="@drawable/ic_carta" />
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_marginTop="60dp"
+      tools:listitem="@layout/cart_layout"
+      android:layout_height="match_parent"
+
+      android:id="@+id/recyclerview"
+      />
+</RelativeLayout>
